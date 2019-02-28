@@ -11,13 +11,16 @@
 <body> <!-- figure out if previews to social are possible or just message box-->
     <header>
         <h1><a href="index.html"> Priya Mistry </a></h1> 
-        <div>
-            <ul class="nav">
-                <li class="inline"> <a href="about-me.html">About Me</a> </li>
-                <li class="inline"> <a href="professional.html">Professional</a></li>
-                <li class="inline"> <a href="connect.html">Connect</a></li>
-            </ul>
-        </div>
+        <nav role="navigation">
+                <ul class="nav">
+                    <li class="nav"> <a href="about-me.html">About Me</a> </li>
+                    <li class="nav"> <a href="professional.html">Professional</a></li> 
+                        <ul class="dropdown"> 
+                            <li class="nav"><a href="projects.html">Projects</a></li>
+                            </ul>
+                    <li class="nav"><a href="connect.html">Connect</a></li>
+                </ul>
+            </nav>  
     </header>   
     <main class="form">
        <div class="form"><h4>Thank you for taking the time to visit my page! Feel free to contact me with any questions, comments, or project ideas! Connect with me to learn more about my professional and personal endeavors.</h4> </div>
@@ -25,22 +28,23 @@
         <form action="message">
 
             <p class="form">Name</p>
-            <input type="name" name="name">
+            <input type="name" name="first name" class="name">
+                <p class="name">First Name</p>
+            <input type="name" name="last name" class="name">
+                <p class="name">Last Name</p>
 
             <p class="form">Email</p>
             <input type="email" name="email">
 
             <p class="form">Enter Message</p>
-            <textarea rows="5" cols="40"> </textarea>
+            <textarea rows="5" cols="50"> </textarea>
 
             <input type="button" value="Submit">
         </form>
 
-        <footer>
             <a href="https://www.linkedin.com/in/priya-mistry" class="connect" target="_blank">
-                <img src="images/linkedin.png" class="circle"> 
+                <img src="images/linkedin.png" class="linkedin"> 
             </a>
-        </footer>
     </main> 
 </body>
 </html>

@@ -17,25 +17,39 @@ header {
     z-index: 10;
 }
 
-h1, div {
+h1 {
     text-align: center;
     color: white;
     font-weight: lighter;
     background-color: black;
     line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
 }
 
-h1:link, h1:visited, h1:active {
+a:link, a:visited, a:active {
     color: white;
     text-decoration: none;
 }
 
-h1 {
-    margin-bottom: 0;
-    margin-top: 0;
+a {
+    text-decoration: none;
 }
 
- ul.nav {
+nav {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+}
+
+ul {
+    background: black;
+    list-style: none;
+    margin: 0;
+}
+ul.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -45,18 +59,48 @@ h1 {
     justify-content: center;
 } 
 
-li.inline {
-    width: 5.75rem; /* 92/16 */
-    margin: 0 0.5rem; 
+li.nav {
+    color: white;
+    background: black;
+    display: inline-block;
+    line-height: 1.5;
+    padding: 0.5rem 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
 }
 
-a:link, a:visited, a:active {
+li a {
     color: white;
-    text-decoration: none;
 }
 
 a:hover {
-    color: #CFCFCF;
+    color:#CFCFCF;
+    cursor: pointer;
+}
+
+ul.dropdown {
+    background: black;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 1rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 0;
+    display: none;
+}
+
+ul li:hover > ul,
+ ul li:focus-within > ul,
+ ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
 }
 
 img.main {
@@ -68,13 +112,22 @@ img.main {
 div.main {
     background-color: white;
     color: black;
+    display: grid;
+    grid-template-columns: 1rem auto 1rem;
+    grid-template-rows: 1rem auto 1rem;
+    grid-gap: 0.5rem 0.5rem;
+    justify-items: center;
+    grid-template-areas: 
+        '. welcome .'
+        '. triangle .'
+        '. quote .'; 
 }
 
 img.triangle {
     width: 10%;
-    /*top: 5.5rem;*/
-    /*left: 11.1rem; */
     position: relative;
+    grid-area: triangle; 
+    padding-top: 1.25rem;
 }
 
 main {
@@ -96,6 +149,7 @@ h2.center {
     font-weight: lighter;
     /*top: 5rem;*/
     position: relative;
+    grid-area: welcome; 
 }
 
 p.center {
@@ -105,6 +159,12 @@ p.center {
     margin: 1rem;
     /*top: 5.3rem;*/
     position: relative;
+}
+
+div.quote {
+    background-color: white;
+    color: black;
+    grid-area: quote;
 }
 
 h4 {
@@ -130,6 +190,26 @@ li {
 
 ul.ed {
     list-style-type: none;
+    margin-right: 1.5rem; 
+    font-weight: lighter;
+    color: black;
+    background-color: white;
+    line-height: 1.3;
+}
+
+p.title {
+    padding-bottom: 0.5rem;
+}
+
+ul.resume {
+    list-style-type: circle;
+    color: black;
+    background-color: white;
+    line-height: 1.3;
+}
+
+#space {
+    padding-top: 0.75rem;
 }
 
 h2 {
@@ -137,19 +217,37 @@ h2 {
     font-weight: normal;
 }
 
+main.form {
+    display: grid;
+    grid-template-columns: 5rem auto 5rem;
+    grid-template-rows: 2rem auto 2rem;
+    grid-gap: 0.5rem 0.5rem;
+    grid-template-areas: 
+        '. intro .'
+        '. form .'
+        '. . linkedin'; 
+    justify-items: center;
+}
+
 div.form {
     background-color: white;
     color: black; 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-area: intro; 
+    margin-bottom: 1rem;
 }
 
+
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    
+    grid-area: form;
+    margin-top: 1rem;
+}
+
+form[action=message] {
+    margin-top: 4rem;
 }
 
 input {
@@ -157,6 +255,10 @@ input {
     border: 1px solid #CFCFCF;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
+}
+
+input.name {
+    margin-bottom: 0.25rem;
 }
 
 textarea {
@@ -174,6 +276,7 @@ input[type=button] {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 0.51rem;
     cursor: pointer;
+    
 }
 
 p.form {
@@ -182,11 +285,24 @@ p.form {
     font-weight: normal;
 }
 
+p.name {
+    margin: 0 0 1rem 2rem;
+    font-weight: lighter;
+    font-size: 60%;
 
-img.circle {
-    width: 3.5%; /*1.8rem; */
-    /*left: 21.6rem;*/
+}
+
+a.connect {
+    grid-area: linkedin;
+    justify-items: start;
+    align-items: start;
+}
+
+img.linkedin {
+    width: 90%;
     position: relative;
-    z-index: 20;
+    padding-right: 0.3rem;
+    justify-self: start;
+    align-self: start; 
 }
 

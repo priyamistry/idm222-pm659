@@ -11,13 +11,16 @@
 <body> <!-- add class tags to heads to change font weight-->
     <header>
         <h1><a href="index.html"> Priya Mistry </a></h1>
-        <div>
-            <ul class="nav">
-                <li class="inline"> <a href="about-me.html">About Me</a> </li>
-                <li class="inline"> <a href="professional.html">Professional</a></li>
-                <li class="inline"> <a href="connect.html">Connect</a></li>
-            </ul>
-        </div>
+        <nav role="navigation">
+                <ul class="nav">
+                    <li class="nav"> <a href="about-me.html">About Me</a> </li>
+                    <li class="nav"> <a href="professional.html">Professional</a></li> 
+                        <ul class="dropdown"> 
+                            <li class="nav"><a href="projects.html">Projects</a></li>
+                            </ul>
+                    <li class="nav"><a href="connect.html">Connect</a></li>
+                </ul>
+            </nav>  
     </header>
     <img src="images/Headshot.jpg" class="main"> <!-- center image/bleed image and put full picture above fold-->
     <main>
@@ -27,13 +30,13 @@
         <li>Bachelor of Science in Business Administration</li>
         <li>Majors: Marketing and Technology Innovation Management</li>
         <li>Minor: Interactive Digital Media</li>
-        <li>Cumulative GPA: <b>3.88</b></li>
+        <li>Cumulative GPA: <b>3.90</b></li>
         <li>Anticipated Graduation: June 2021</li>
        </ul>
     <h2>Professional Experience</h2>
         <p><b>SAP America, Inc.</b></p>
         <p class="title">Regional Field Marketing Co-Op</p>
-        <ul>
+        <ul class="resume">
             <li>Project managed Business Reimagined Tour summer campaign by working with account executives to select justified accounts to nominate based on pipeline, suggest optimal dates, and confirm seven customer stops in the East Market Unit</li>            
             <li> Designed and distributed launch communication for Business Reimagined Tour fall campaign to account teams showcasing program purpose and goals, key summer campaign successes and statistics, and improved demo packages</li>
             <li>Placed first in Quest to Run Best competition with group of four by proposing a live and digital hybrid event focused on key growth areas as a co-marketing program to produce $80,000 in partner marketing revenue for North America Marketing</li>
@@ -43,26 +46,26 @@
     <h2>Project Experience</h2>
         <p><b>Deloitte Undergraduate Case Competition</b></p>
         <p class="title">2nd Place</p>
-            <ul>
+            <ul class="resume">
                 <li>Acted as Business Technology Analyst with a team of three to create a plan for a flagship apparel retailer to modify its existing competitive strategy by establishing brand differentiation through Blue Ocean Strategy</li>
                 <li>Researched the positive impact of investing in enhanced user interface and user experience in order to justify designing a new prototype for both an app and a website which feature upcoming events, membership dashboard, and exclusive member content</li>
                 <li>Strategized a pop-up retail experience by effectively targeting families and millennials through digital and communal presence</li>
             </ul>
-        <p><b>Collegiate ECHO Marketing Challenge</b></p>
+        <p id="space"><b>Collegiate ECHO Marketing Challenge</b></p>
         <p class="title">Participant</p>
-            <ul>
+            <ul class="resume">
                 <li>Developed a 6-month integrated omni-channel marketing campaign to drive Fossil Q Smartwatch sales using existing channels</li>
                 <li>Conducted research to determine target markets and effective strategies to gain brand exposure as well as retain sales</li>
                 <li>Presented 30-page marketing campaign with visuals including communication plan, media plan, and 40-second advertisement</li>
             </ul>
     <h2>Skills</h2>
-        <ul>
+        <ul class="resume">
             <li><b>Software</b>: HTML; CSS; Proficient in Microsoft Office (Word, PowerPoint, Excel); Basic in Adobe Photoshop </li>
             <li><b>Languages</b>: Conversant in Gujarati; Basic in Spanish </li>
             <li><b>Interests</b>: Hiking, Traveling, Cooking</li>
         </ul>
     <h2>Honors and Awards</h2>
-        <ul>
+        <ul class="resume">
             <li>NJ ACI Scholarship</li>
             <li>Dean's List</li>
             <li>A.J. Drexel Scholarship</li>

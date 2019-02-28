@@ -11,13 +11,16 @@
 <body>
     <header>
         <h1> <a href="index.html"> Priya Mistry </a></h1>
-        <div>
-            <ul class="nav">
-                <li class="inline"> <a href="about-me.html">About Me</a> </li>
-                <li class="inline"> <a href="professional.html">Professional</a></li>
-                <li class="inline"> <a href="connect.html">Connect</a></li>
-            </ul>
-        </div>
+        <nav role="navigation">
+                <ul class="nav">
+                    <li class="nav"> <a href="about-me.html">About Me</a> </li>
+                    <li class="nav"> <a href="professional.html">Professional</a></li> 
+                        <ul class="dropdown"> 
+                            <li class="nav"><a href="projects.html">Projects</a></li>
+                            </ul>
+                    <li class="nav"><a href="connect.html">Connect</a></li>
+                </ul>
+            </nav>  
     </header>
     <img src="images/nyc.jpg" class="main"> <!-- center image/bleed image and put full picture above fold-->
     <main>
