@@ -12,7 +12,6 @@ body {
 }
 
 header {
-    /*position: fixed;*/
     width: 100%;
     z-index: 10;
 }
@@ -49,11 +48,13 @@ ul {
     list-style: none;
     margin: 0;
 }
+
 ul.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     line-height: 2;
+    transition: all 0.5s ease;
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -79,7 +80,7 @@ a:hover {
     cursor: pointer;
 }
 
-ul.dropdown {
+/*ul.dropdown {
     background: black;
     visibility: hidden;
     opacity: 0;
@@ -88,15 +89,15 @@ ul.dropdown {
     transition: all 0.5s ease;
     margin-top: 0;
     display: none;
-}
+} */
 
-ul li:hover > ul,
+/* ul li:hover > ul,
  ul li:focus-within > ul,
  ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
-}
+} */
 
 ul li ul li {
     clear: both;
@@ -148,7 +149,6 @@ img.triangle {
 }
 
 main {
-    /*top: 6rem;*/
     position: relative;
 } 
 
@@ -164,7 +164,6 @@ img.connect {
 h2.center {
     text-align: center;
     font-weight: lighter;
-    /*top: 5rem;*/
     position: relative;
     grid-area: welcome; 
 }
@@ -174,7 +173,6 @@ p.center {
     font-style: italic;
     font-weight: lighter;
     margin: 1rem;
-    /*top: 5.3rem;*/
     position: relative;
 }
 
@@ -303,6 +301,7 @@ input[type=button] {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 0.51rem;
     cursor: pointer;
+    display: block;
     
 }
 
